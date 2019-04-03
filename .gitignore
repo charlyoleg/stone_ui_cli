@@ -1,0 +1,4 @@
+# .gitignore for stone_ui_cli
+*~
+venv
+__pycache__/
