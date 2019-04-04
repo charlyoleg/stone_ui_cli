@@ -60,7 +60,7 @@ def brick_weight(
     return weight
 
 @hug.cli()
-@hug.get('/stone_thermal_conductivity', examples='thickness=0.2&conductivity=3.1')
+@hug.get(examples='thickness=0.2&conductivity=3.1')
 @hug.local()
 def wall_thermal_conductivity(
         conductivity    : hug.types.float_number,
@@ -76,7 +76,7 @@ def wall_thermal_conductivity(
 #################
 
 @hug.cli()
-@hug.get('/visit_statistics')
+@hug.get()
 @hug.local()
 def call_activities():
     """Return a string that summarize the call statistics"""
