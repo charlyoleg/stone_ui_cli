@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Stone Web UI</title>
+  <meta name="description" content="A web-inteface for stone computations">
+  <meta name="author" content="charlyoleg">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <h1>Computations around the stones</h1>
+
+  <h2>Input parametes</h2>
+  <form name="input_params" action="javascript:stoneCompute()">
+      Brick Width (in m):<br>
+      <input type="text" name="brick_width" value="0.4">
+      <br>
+      Brick Height (in m):<br>
+      <input type="text" name="brick_height" value="0.2">
+      <br>
+      Brick Thickness (in m):<br>
+      <input type="text" name="brick_thickness" value="0.2">
+      <br>
+      Material Density (in kg.m-3):<br>
+      <input type="text" name="material_density" value="2800">
+      <br>
+      Material Thermal Conductivity (in W/(K.m)):<br>
+      <input type="text" name="material_thermal_conductivity" value="3.1">
+      <br><br>
+      <input type="submit" value="Compute">
+  </form>
+  
+  <h2>Computation results</h2>
+  <p>Stone Mass (in kg):<p>
+  <p id="brick_mass"</p>
+  <p>Wall Thermal Conductivity (in W/(K.m2)):<p>
+  <p id="wall_thermal_conductivity"</p>
+
+  <h2>Computation statistics</h2>
+  <p id="compute_stat"</p>
+
+  <script src="js/web_ui.js"></script>
+</body>
+</html>
+
