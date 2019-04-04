@@ -20,6 +20,28 @@ Two languages are tested:
 
 Dummy functionalities around stone to demonstrate the ui_cli stuff.
 
+Stone_py
+========
+
+Requirements
+------------
+
+- python3
+- pip3
+- virturalenv
+
+
+Stone_js
+========
+
+Requirements
+------------
+
+- nodejs
+- npm
+- npx
+
+
 Conclusion
 ==========
 
@@ -41,7 +63,8 @@ Javascript
 
 Pros:
 
-- core logic run in browser for the Web-UI variant
+- core logic run in browser for the Web-UI variant. Ready for CDN
+- thanks to npx, no need to install / download explicitely stone_js
 
 Cons:
 
