@@ -2,11 +2,11 @@
 
 function stoneCompute(){
   // read the input parameter
-  var b_w = document.forms['input_params'].elements['brick_width'].value
-  var b_h = document.forms['input_params'].elements['brick_height'].value
-  var b_t = document.forms['input_params'].elements['brick_thickness'].value
-  var m_d = document.forms['input_params'].elements['material_density'].value
-  var m_tc = document.forms['input_params'].elements['material_thermal_conductivity'].value
+  var b_w  = document.getElementById('input_brick_width').value
+  var b_h  = document.getElementById('input_brick_height').value
+  var b_t  = document.getElementById('input_brick_thickness').value
+  var m_d  = document.getElementById('input_material_density').value
+  var m_tc = document.getElementById('input_material_thermal_conductivity').value
   
   // write the output fields
   //document.getElementById("brick_mass").innerHTML = b_w

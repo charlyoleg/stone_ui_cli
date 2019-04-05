@@ -8,7 +8,7 @@
   <meta name="description" content="A web-inteface for stone computations">
   <meta name="author" content="charlyoleg">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/stone_style.css?v=1.0">
 
 </head>
 
@@ -16,21 +16,22 @@
   <h1>Computations around the stones</h1>
 
   <h2>Input parametes</h2>
+  <!-- <form name="input_params" action="next_page"> -->
   <form name="input_params" action="javascript:stoneCompute()">
       Brick Width (in m):<br>
-      <input type="text" name="brick_width" value="0.4">
+      <input type="text" id="input_brick_width" value="0.4">
       <br>
       Brick Height (in m):<br>
-      <input type="text" name="brick_height" value="0.2">
+      <input type="text" id="input_brick_height" value="0.2">
       <br>
       Brick Thickness (in m):<br>
-      <input type="text" name="brick_thickness" value="0.2">
+      <input type="text" id="input_brick_thickness" value="0.2">
       <br>
       Material Density (in kg.m-3):<br>
-      <input type="text" name="material_density" value="2800">
+      <input type="text" id="input_material_density" value="2800">
       <br>
       Material Thermal Conductivity (in W/(K.m)):<br>
-      <input type="text" name="material_thermal_conductivity" value="3.1">
+      <input type="text" id="input_material_thermal_conductivity" value="3.1">
       <br><br>
       <input type="submit" value="Compute">
   </form>
