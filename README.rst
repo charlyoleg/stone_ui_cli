@@ -28,7 +28,12 @@ Requirements
 
 - python3
 - pip3
-- virturalenv
+- virtualenv
+- tkinter
+
+::
+
+  sudo apt-get install python3 pip3 python3-tk virtualenv
 
 
 Stone_js
@@ -65,6 +70,7 @@ Pros:
 
 - core logic run in browser for the Web-UI variant. Ready for CDN
 - thanks to npx, no need to install / download explicitely stone_js
+- nodejs is fast for http-requests and file-access (90% of the job of a web-server)
 
 Cons:
 
