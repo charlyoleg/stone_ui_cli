@@ -16,7 +16,7 @@ fi
 if [ ! -d venv ]; then
   virtualenv -p /usr/bin/python3 venv &&
     source venv/bin/activate &&
-    pip install hug &&
+    pip install hug gunicorn &&
     deactivate &&
     echo "venv is created!"
 fi

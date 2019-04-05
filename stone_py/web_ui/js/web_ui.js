@@ -18,12 +18,14 @@ function stoneCompute(){
   var xhttp_mass = new XMLHttpRequest();
   xhttp_mass.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      // Typical action to be performed when the document is ready:
-      document.getElementById("brick_mass").innerHTML = xhttp_mass.responseText;
+      // Action to be performed when the document is ready:
+      var computed_mass = xhttp_mass.responseText;
+      console.log(computed_mass);
+      document.getElementById("brick_mass").innerHTML = computed_mass;
     }
   };
   xhttp_mass.open("GET",
-    "http://localhost:8000/stone_weight?width="+b_w+"&height="+b_h+"&thickness="+b_t+"&density="+m_d,
+    "https://localhost:8443/stone_weight?width="+b_w+"&height="+b_h+"&thickness="+b_t+"&density="+m_d,
     true);
   xhttp_mass.send();
 
