@@ -20,9 +20,9 @@ function stoneCompute(){
   xhttp_mass.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       // Action to be performed when the document is ready:
-      var computed_mass = xhttp_mass.responseText;
+      var computed_mass = parseFloat(xhttp_mass.responseText);
       console.log(computed_mass);
-      document.getElementById("brick_mass").innerHTML = computed_mass;
+      document.getElementById("brick_mass").innerHTML = computed_mass.toFixed(2);
     }
   };
   xhttp_mass.open("GET",
@@ -35,9 +35,9 @@ function stoneCompute(){
   xhttp_thermal_conductivity.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       // Action to be performed when the document is ready:
-      var computed_thermal_conductivity = xhttp_thermal_conductivity.responseText;
+      var computed_thermal_conductivity = parseFloat(xhttp_thermal_conductivity.responseText);
       console.log(computed_thermal_conductivity);
-      document.getElementById("wall_thermal_conductivity").innerHTML = computed_thermal_conductivity;
+      document.getElementById("wall_thermal_conductivity").innerHTML = computed_thermal_conductivity.toFixed(2);
     }
   };
   xhttp_thermal_conductivity.open("GET",
