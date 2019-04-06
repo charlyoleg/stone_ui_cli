@@ -17,7 +17,8 @@ echo "Start the micro-service server ..."
 #source venv/bin/activate && gunicorn --check-config --config=gunicorn_config.py stone:__hug_wsgi__ && deactivate
 ## launch the https restful micro-service
 gnome-terminal --working-directory=$(pwd) -- \
-  bash -c 'source venv/bin/activate && gunicorn --config=gunicorn_config.py stone:__hug_wsgi__'
+  bash -c 'source venv/bin/activate &&
+    gunicorn --certfile=gunicorn_server.crt --keyfile=gunicorn_server.key --bind=0.0.0.0:8443 stone:__hug_wsgi__'
 
 # give time to the server to start its service
 sleep 2
