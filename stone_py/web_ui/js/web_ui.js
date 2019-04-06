@@ -14,6 +14,7 @@ function stoneCompute(){
   //document.getElementById("compute_stat").innerHTML = "7000"
   
   //// Using the restful micro-service
+
   // Request for Brick_Mass
   var xhttp_mass = new XMLHttpRequest();
   xhttp_mass.onreadystatechange = function() {
@@ -29,5 +30,32 @@ function stoneCompute(){
     true);
   xhttp_mass.send();
 
+  // Request for Wall_Thermal_Conductivity
+  var xhttp_thermal_conductivity = new XMLHttpRequest();
+  xhttp_thermal_conductivity.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Action to be performed when the document is ready:
+      var computed_thermal_conductivity = xhttp_thermal_conductivity.responseText;
+      console.log(computed_thermal_conductivity);
+      document.getElementById("wall_thermal_conductivity").innerHTML = computed_thermal_conductivity;
+    }
+  };
+  xhttp_thermal_conductivity.open("GET",
+    "https://localhost:8443/wall_thermal_conductivity?thickness="+b_t+"&conductivity="+m_tc,
+    true);
+  xhttp_thermal_conductivity.send();
+
+  // Request for Computation-statistics
+  var xhttp_compute_stat = new XMLHttpRequest();
+  xhttp_compute_stat.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Action to be performed when the document is ready:
+      var compute_stat = JSON.parse(xhttp_compute_stat.responseText);
+      console.log(compute_stat.visit_stat);
+      document.getElementById("compute_stat").innerHTML = compute_stat.visit_stat.replace(/\n/g, "<br>");
+    }
+  };
+  xhttp_compute_stat.open("GET", "https://localhost:8443/call_activities", true);
+  xhttp_compute_stat.send();
 }
 
