@@ -83,3 +83,14 @@ def call_activities():
     return {'visit_stat': '{:s}'.format(call_stat.get_statistics()) }
 
 
+
+#################
+# Restful micro-service Enhancement
+#################
+
+# Complete the http response header to make the Restful micro-service compatible with
+# Firefox Cross-Origin-Request Policy
+@hug.response_middleware()
+def process_data(request, response, resource):
+    response.set_header('Access-Control-Allow-Origin', '*')
+
