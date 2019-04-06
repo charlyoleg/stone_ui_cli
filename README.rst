@@ -23,6 +23,12 @@ Dummy functionalities around stone to demonstrate the ui_cli stuff.
 Stone_py
 ========
 
+Implementation
+--------------
+
+The library *hug* answers completely the problematic and makes all the hard job. Finally, *stone.py* just illustrates how to use *hug*.
+
+
 Requirements
 ------------
 
