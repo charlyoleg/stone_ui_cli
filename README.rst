@@ -1,6 +1,6 @@
-========
-UI & CLI
-========
+==============
+Stone UI & CLI
+==============
 
 Goal
 ====
@@ -26,7 +26,9 @@ Stone_py
 Implementation
 --------------
 
-The library *hug* answers completely the problematic and makes all the hard job. Finally, *stone.py* just illustrates how to use *hug*.
+*Stone_py* uses the library hug_. *hug* answers completely the problematic and makes all the hard job. Finally, *stone.py* just illustrates how to use *hug*.
+
+.. _hug: http://www.hug.rest
 
 
 Requirements
