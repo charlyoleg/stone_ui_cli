@@ -27,8 +27,8 @@ class CallStatistics {
         //let total_str = total.toString();
         let r = "visit counts:\n";
         r += `brick_weight calls                : ${this.brick_height}\n`;
-        r += `wall_thermal_conductivity calls   : ${this.wall_thermal_conductivity}\n`
-        r += `total calls                       : ${total}\n`
+        r += `wall_thermal_conductivity calls   : ${this.wall_thermal_conductivity}\n`;
+        r += `total calls                       : ${total}\n`;
         return(r);
     }
 }
@@ -72,5 +72,5 @@ module.exports = {
     stone_weight,
     wall_thermal_conductivity,
     call_activities
-}
+};
 
