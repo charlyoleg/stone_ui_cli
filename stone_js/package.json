@@ -1,0 +1,31 @@
+{
+  "name": "stone_js",
+  "version": "1.0.0",
+  "description": "playing with es6 and node modules",
+  "main": "stone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlyoleg/stone_ui_cli.git"
+  },
+  "keywords": [
+    "python",
+    "javascript",
+    "rest"
+  ],
+  "author": "charlyoleg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlyoleg/stone_ui_cli/issues"
+  },
+  "homepage": "https://github.com/charlyoleg/stone_ui_cli#readme",
+  "dependencies": {
+    "esm": "^3.2.22",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
