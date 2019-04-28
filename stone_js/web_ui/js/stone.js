@@ -66,7 +66,7 @@ function call_activities() {
 
 
 // ####################################
-// ES module export
+// module export
 // ####################################
 
 export {
