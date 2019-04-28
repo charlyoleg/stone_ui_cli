@@ -5,8 +5,27 @@
 // A black-magic solution from ESM, waiting for the official support for es6-module by nodejs, planned with node-V12.0
 require = require("esm")(module/*, options*/);
 const stone = require("./web_ui/js/stone.js");
+// With node V12.0, this will be replaced by
+//import * as stone from './web_ui/js/stone.js';
 
+// dummy try
 var r = stone.stone_weight(1,2,3, 1);
 console.log("stone.stone_weight(): " + r);
 
+// mass of a limestone brick
+var r = stone.stone_weight(0.4, 0.2, 0.2, 2800);
+//var r = stone.stone_weight(0.4, 0.2, 0.2); // thanks to paramter default values
+//var r = stone.stone_weight(); // thanks to paramter default values
+console.log("limestone brick mass: " + r.toFixed(2) + " kg");
+
+// thermal conductivity of a limestone brick
+var r = stone.wall_thermal_conductivity(3.1, 0.2);
+console.log("thermal conductivity of limeston wall: " + r.toFixed(1) + "W/(m2.K)\n");
+
+// display the call statistics
+var r = stone.call_activities();
+console.log("Print a part of the json");
+console.log(r.visit_stat);
+
+console.log("end of user_prog.js");
 

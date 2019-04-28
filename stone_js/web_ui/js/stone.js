@@ -16,7 +16,7 @@ const call_stat = new stone_sub.CallStatistics();
 // the stone core
 // ####################################
 
-function stone_weight(width, height, thickness, density) {
+function stone_weight(width = 0.4, height = 0.2, thickness = 0.2, density = 2800) {
     console.log('stone_core: stone_weight: width: ' + width);
     call_stat.tick_off_brick_weight();
     console.log("W: " + width.toFixed(2) + "  H: " + height.toFixed(2) +
@@ -25,7 +25,7 @@ function stone_weight(width, height, thickness, density) {
     return r_weight;
 }
 
-function wall_thermal_conductivity(conductivity, thickness) {
+function wall_thermal_conductivity(conductivity = 3.1, thickness = 0.2) {
     console.log('stone_core: wall_thermal_conductivity: conductivity: ' + conductivity.toFixed(2));
     call_stat.tick_off_wall_thermal_conductivity();
     let r_wall_conductivity = conductivity / thickness;
