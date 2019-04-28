@@ -11,8 +11,8 @@ const https = require('https');
 const fs = require('fs');
 
 const ssl_options = {
-    key: fs.readFileSync("./server.key"),
-    cert: fs.readFileSync("./server.crt")
+    key: fs.readFileSync("./rest_server.key"),
+    cert: fs.readFileSync("./rest_server.crt")
 };
 
 const stone_rest_app = express();
