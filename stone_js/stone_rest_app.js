@@ -2,7 +2,8 @@
 
 'use strict';
 
-const stone = require("./stone.js");
+require = require("esm")(module/*, options*/);
+const stone = require("./web_ui/js/stone.js");
 
 const express = require('express');
 const https = require('https');
