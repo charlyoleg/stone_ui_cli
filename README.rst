@@ -5,7 +5,7 @@ Stone UI & CLI
 Goal
 ====
 
-How provide some functionalities with one code base and supporting the following interfaces for the users?
+How to provide some functionalities with one code base and supporting the following interfaces for the users?
 
 - Programming API
 - Network API
@@ -51,8 +51,7 @@ Requirements
 ------------
 
 - nodejs
-- npm
-- npx
+- npm/npx
 
 
 Conclusion
