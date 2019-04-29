@@ -5,9 +5,13 @@
   "main": "web_ui/js/stone.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "run_cli": "./run_cli.sh",
     "run_local_user_program": "./run_local_user_program.sh",
     "run_network_api_micro_service": "./run_network_api_micro_service.sh",
     "run_web_ui": "./run_web_ui.sh"
+  },
+  "bin": {
+    "stone_cli": "./stone_cli.js"
   },
   "repository": {
     "type": "git",

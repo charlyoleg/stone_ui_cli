@@ -54,6 +54,12 @@ cli
     console.log("stone.call_activities() .visit_stat:\n" + r.visit_stat);
 });
 
+cli
+  .command('*')
+  .action( (cmd) => {
+    console.log("ERR234: Error, unkown command: " + cmd);
+});
+
 
 // =================================
 // execute the cli
