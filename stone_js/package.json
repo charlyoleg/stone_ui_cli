@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run_cli": "./run_cli.sh",
+    "run_gui": "electron ./stone_gui.js",
     "run_local_user_program": "./run_local_user_program.sh",
     "run_network_api_micro_service": "./run_network_api_micro_service.sh",
     "run_web_ui": "./run_web_ui.sh"
@@ -34,6 +35,7 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "electron": "^5.0.0",
     "live-server": "^1.2.1"
   }
 }
