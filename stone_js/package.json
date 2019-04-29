@@ -2,7 +2,7 @@
   "name": "stone_js",
   "version": "1.0.0",
   "description": "playing with es6 and node modules",
-  "main": "stone.js",
+  "main": "web_ui/js/stone.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
