@@ -9,8 +9,8 @@ function createWindow () {
   win = new BrowserWindow({ width: 800, height: 600 })
 
   // and load the index.html of the app.
-  //win.loadFile('./bla.html')
-  win.loadURL(`file://${__dirname}/web_ui/index.html`)
+  win.loadFile(`${__dirname}/web_ui/index.html`)
+  //win.loadURL(`file://${__dirname}/web_ui/index.html`)
 
   // Open the DevTools.
   win.webContents.openDevTools()
