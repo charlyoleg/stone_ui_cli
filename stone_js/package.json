@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/charlyoleg/stone_ui_cli#readme",
   "dependencies": {
+    "commander": "^2.20.0",
     "esm": "^3.2.22",
     "express": "^4.16.4"
   },
