@@ -6,9 +6,8 @@ let win;
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({ width: 600, height: 800, titleBarStyle: 'hidden' });
+  win = new BrowserWindow({ width: 600, height: 800, autoHideMenuBar: true });
   //win.setAutoHideMenuBar(true);
-  //win.setMenu(null);
 
   // and load the index.html of the app.
   win.loadFile(`${__dirname}/web_ui/index.html`);
