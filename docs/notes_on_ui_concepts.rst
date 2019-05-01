@@ -8,6 +8,8 @@ Graphical User Interfaces
 Device exploration
 ------------------
 
+.. image:: device_overview.png
+
 A list of devices that could provide a graphical-user-interface:
 
 - laptop
