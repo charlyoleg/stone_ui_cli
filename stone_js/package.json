@@ -4,7 +4,7 @@
   "description": "playing with es6 and node modules",
   "main": "web_ui/js/stone.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "lint2": "jshint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "docs": "jsdoc web_ui/js/stone.js && sensible-browser out/global.html",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "electron": "^5.0.0",
     "eslint": "^5.16.0",
+    "jest": "^24.7.1",
     "jsdoc": "^3.5.5",
     "jshint": "^2.10.2",
     "live-server": "^1.2.1"
