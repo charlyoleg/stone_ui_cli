@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "lint2": "jshint web_ui/js/stone.js web_ui/js/stone_sub.js",
+    "docs": "jsdoc web_ui/js/stone.js && sensible-browser out/global.html",
     "run_cli": "./run_cli.sh",
     "run_gui": "electron ./stone_gui.js",
     "run_local_user_program": "./run_local_user_program.sh",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "electron": "^5.0.0",
     "eslint": "^5.16.0",
+    "jsdoc": "^3.5.5",
     "jshint": "^2.10.2",
     "live-server": "^1.2.1"
   }
