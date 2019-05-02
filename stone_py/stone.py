@@ -10,33 +10,11 @@ a dummy logic that can be used from several ways
 
 import hug
 
+import stone_sub
 
-#################
-# The helper stuff
-#################
-
-class call_statistics:
-    """Class to track the activity of the stone functionalities"""
-
-    def __init__(self):
-        self.brick_weight = 0
-        self.wall_thermal_conductivity = 0
-
-    def tick_off_brick_weight(self):
-        self.brick_weight += 1
-
-    def tick_off_wall_thermal_conductivity(self):
-        self.wall_thermal_conductivity += 1
-
-    def get_statistics(self):
-        r =  "visit counts:\n"
-        r += "brick_weight calls                : {}\n".format(self.brick_weight)
-        r += "wall_thermal_conductivity calls   : {}\n".format(self.wall_thermal_conductivity)
-        r += "total calls                       : {}\n".format(self.brick_weight + self.wall_thermal_conductivity)
-        return(r)
 
 # the global stats
-call_stat = call_statistics()
+call_stat = stone_sub.call_statistics()
 
 
 #################
