@@ -1,0 +1,11 @@
+// my basic .eslintrc.json config for eslint
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": "error"
+    }
+}
+
