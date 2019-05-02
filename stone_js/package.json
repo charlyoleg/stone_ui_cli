@@ -4,7 +4,8 @@
   "description": "playing with es6 and node modules",
   "main": "web_ui/js/stone.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
+    "test-watcher": "jest --verbose --watchAll",
     "lint": "eslint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "lint2": "jshint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "docs": "jsdoc web_ui/js/stone.js && sensible-browser out/global.html",
