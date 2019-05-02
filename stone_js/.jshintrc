@@ -1,0 +1,10 @@
+{
+  "esversion": 6,
+  "devel": true,
+  "strict": "global",
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "MY_GLOBAL": true
+  }
+}
