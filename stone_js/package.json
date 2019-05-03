@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --verbose",
     "test-watcher": "jest --verbose --watchAll",
+    "format": "semistandard web_ui/js/*",
     "lint": "eslint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "lint2": "jshint web_ui/js/stone.js web_ui/js/stone_sub.js",
     "docs": "jsdoc web_ui/js/stone.js && sensible-browser out/global.html",
@@ -44,6 +45,7 @@
     "jest": "^24.7.1",
     "jsdoc": "^3.5.5",
     "jshint": "^2.10.2",
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "semistandard": "^13.0.1"
   }
 }
