@@ -21,5 +21,3 @@ test('simple therma conductivity', () => {
 test('looking at stone-api activities', () => {
   expect(stone.callActivities().visit_stat).toMatch(/visit counts:/);
 });
-
-
