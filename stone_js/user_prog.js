@@ -9,21 +9,21 @@ const stone = require("./web_ui/js/stone.js");
 //import * as stone from './web_ui/js/stone.js';
 
 // dummy try
-var r = stone.stone_weight(1,2,3, 1);
-console.log("stone.stone_weight(1,2,3, 1): " + r);
+var r = stone.stoneWeight(1,2,3, 1);
+console.log("stone.stoneWeight(1,2,3, 1): " + r);
 
 // mass of a limestone brick
-var r = stone.stone_weight(0.4, 0.2, 0.2, 2800);
-//var r = stone.stone_weight(0.4, 0.2, 0.2); // thanks to paramter default values
-//var r = stone.stone_weight(); // thanks to paramter default values
+var r = stone.stoneWeight(0.4, 0.2, 0.2, 2800);
+//var r = stone.stoneWeight(0.4, 0.2, 0.2); // thanks to paramter default values
+//var r = stone.stoneWeight(); // thanks to paramter default values
 console.log("limestone brick mass: " + r.toFixed(2) + " kg");
 
 // thermal conductivity of a limestone brick
-var r = stone.wall_thermal_conductivity(3.1, 0.2);
+var r = stone.wallThermalConductivity(3.1, 0.2);
 console.log("thermal conductivity of limeston wall: " + r.toFixed(1) + " W/(m2.K)\n");
 
 // display the call statistics
-var r = stone.call_activities();
+var r = stone.callActivities();
 console.log("Print a part of the json:");
 console.log(r.visit_stat);
 

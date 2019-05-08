@@ -30,8 +30,8 @@ cli
     console.log("stone_weight options: width: %f   height: %f   thickness: %f   density: %f",
       options.width, options.height, options.thickness, options.density);
     // core computation
-    let r = stone.stone_weight(options.width, options.height, options.thickness, options.density);
-    console.log("stone.stone_weight(): " + r.toFixed(2) + " Kg");
+    let r = stone.stoneWeight(options.width, options.height, options.thickness, options.density);
+    console.log("stone.stoneWeight(): " + r.toFixed(2) + " Kg");
 });
 
 cli
@@ -42,16 +42,16 @@ cli
     console.log("wall_thermal_conductivity options: conductivity: %f   thickness: %f",
       options.conductivity, options.thickness);
     // core computation
-    let r = stone.wall_thermal_conductivity(options.conductivity, options.thickness);
-    console.log("stone.wall_thermal_conductivity(): " + r.toFixed(2) + " W/(k.m2)");
+    let r = stone.wallThermalConductivity(options.conductivity, options.thickness);
+    console.log("stone.wallThermalConductivity(): " + r.toFixed(2) + " W/(k.m2)");
 });
 
 cli
   .command('call_activities')
   .action( (options) => {
     // core computation
-    let r = stone.call_activities();
-    console.log("stone.call_activities() .visit_stat:\n" + r.visit_stat);
+    let r = stone.callActivities();
+    console.log("stone.callActivities() .visit_stat:\n" + r.visit_stat);
 });
 
 cli

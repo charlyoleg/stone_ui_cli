@@ -43,7 +43,7 @@ stone_rest_app.get('/stone_weight', (req, res) => {
     console.log("W: " + q_width.toFixed(2) + "  H: " + q_height.toFixed(2) +
         "  T: " + q_thickness.toFixed(2) + "  D: " + q_density.toFixed(2));
     //let r_weight = q_width * q_height * q_thickness * q_density;
-    let r_weight = stone.stone_weight(q_width, q_height, q_thickness, q_density);
+    let r_weight = stone.stoneWeight(q_width, q_height, q_thickness, q_density);
     res.send(r_weight.toString());
 });
 
@@ -52,14 +52,14 @@ stone_rest_app.get('/wall_thermal_conductivity', (req, res) => {
     let q_conductivity = parseFloat(req.query.conductivity);
     let q_thickness = parseFloat(req.query.thickness);
     //let r_wall_conductivity = q_conductivity / q_thickness;
-    let r_wall_conductivity = stone.wall_thermal_conductivity(q_conductivity, q_thickness);
+    let r_wall_conductivity = stone.wallThermalConductivity(q_conductivity, q_thickness);
     res.send(r_wall_conductivity.toString());
 });
 
 // the sugar
 stone_rest_app.get('/call_activities', (req, res) => {
     console.log('stone_rest_app: call_activities');
-    res.json(stone.call_activities());
+    res.json(stone.callActivities());
 });
 
 // ####################################
