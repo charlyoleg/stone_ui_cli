@@ -5,7 +5,7 @@ cd $(dirname $0)
 
 # start the REST API server in background
 echo "Start the micro-service server ..."
-#gnome-terminal --working-directory=$(pwd) -- bash -c 'source venv/bin/activate && hug -f stone.py'
+#gnome-terminal --working-directory=$(pwd) -- bash -c 'pipenv run hug -f stone.py'
 #hug -f stone.py > /tmp/hug_stone.log 2>&1 &
 ### hug-webserver supports only http. Gunicorn supports https, needed to overcome firefox cross-origin-request policy
 ## create the key and certificate for ssl
@@ -14,11 +14,10 @@ echo "Start the micro-service server ..."
 #chmod go-r server.key
 #openssl req -new -x509 -nodes -sha256 -days 365 -key server.key -out server.crt
 ## check the config file
-#source venv/bin/activate && gunicorn --check-config --config=gunicorn_config.py stone:__hug_wsgi__ && deactivate
+#pipenv run gunicorn --check-config --config=gunicorn_config.py stone:__hug_wsgi__
 ## launch the https restful micro-service
 gnome-terminal --working-directory=$(pwd) -- \
-  bash -c 'source venv/bin/activate &&
-    gunicorn --certfile=gunicorn_server.crt --keyfile=gunicorn_server.key --bind=0.0.0.0:8443 stone:__hug_wsgi__'
+  bash -c 'pipenv run gunicorn --certfile=gunicorn_server.crt --keyfile=gunicorn_server.key --bind=0.0.0.0:8443 stone:__hug_wsgi__'
 
 # give time to the server to start its service
 sleep 2

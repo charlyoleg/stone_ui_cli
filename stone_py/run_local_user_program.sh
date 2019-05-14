@@ -2,9 +2,7 @@
 # run_local_user_program.sh
 
 cd $(dirname $0)
-source venv/bin/activate
 
-./user_prog.py
+pipenv run ./user_prog.py
 
-deactivate
 
