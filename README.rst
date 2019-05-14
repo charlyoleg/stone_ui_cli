@@ -34,14 +34,34 @@ Implementation
 Requirements
 ------------
 
-- python3
-- pip3
-- virtualenv
+- python3 (v3.6.7)
+- pip3 (v9.0.1)
+- pipenv (v2018.11.26)
+- virtualenv (v15.1.0)
 - tkinter
 
 ::
 
-  sudo apt-get install python3 pip3 python3-tk virtualenv
+  sudo apt install python3 pip3 python3-tk virtualenv
+  sudo pip install pipenv
+
+
+Getting started
+---------------
+
+In a terminal, run::
+
+  # preparation
+  git clone https://github.com/charlyoleg/stone_ui_cli.git
+  cd stone_ui_cli/stone_py
+  ./setup_py_stuff.sh
+  # try the 5 interfaces
+  ./run_local_user_program.sh
+  ./run_cli.sh
+  ./run_network_api_micro_service.sh
+  ./run_gui.sh
+  ./run_web_ui.sh
+
 
 
 Stone_js
